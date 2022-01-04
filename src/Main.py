@@ -24,6 +24,10 @@ def Q1b_f():
         setParameter('yAxisCo lor', [0,1,1]). \
         display()
         
+     
+        
+    
+        
 def Q2b():
     # Ecriture en utilisant le chaînage
     return Configuration().add(
@@ -36,24 +40,36 @@ def Q2c():
             Section({'position': [1, 1, 0], 'width':7, 'height':2.6, 'edges': True})
             )
 
+  
+
 def Q3a():
-    pass  
+    return Configuration().add(
+            Wall({'position' : [1, 1, 0], 'width':7, 'height':2.6,'edges': True})
+            ).display() 
+
+    
 
 def Q4a():
     # Ecriture en utilisant des variables : A compléter
-    wall1 = Wall(...)
-    wall2 = Wall(...)
-    wall3 = Wall(...)
-    wall4 = Wall(...)  
+    wall1 = Wall({'position' : [0, 0, 0], 'width':7, 'height':3, 'edges': True, 'orientation' : 0 })
+    wall2 = Wall({'position' : [0, -7, 0], 'width':7, 'height':3, 'edges': True,  'orientation' : 90 })
+    wall3 = Wall({'position' : [0, 7, 0], 'width':7, 'height':3, 'edges': True, 'orientation' : 0 })
+    wall4 = Wall({'position' : [0, 0, 0], 'width':7, 'height':3, 'edges': True, 'orientation' : 90 }) 
     house = House({'position': [-3, 1, 0], 'orientation':0})
     house.add(wall1).add(wall3).add(wall4).add(wall2)
-    return Configuration().add(house)   
-    
+    return Configuration().add(house)  
+
+   
+
 def Q5a():  
     # Ecriture avec mélange de variable et de chaînage    
-    opening1 = Opening({'position': [2, 0, 0], 'width':0.9, 'height':2.15, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
-    opening2 = Opening({'position': [4, 0, 1.2], 'width':1.25, 'height':1, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})    
+    opening1 = Opening({'position': [2, 0, 0], 'width':0.9,
+                        'height':2.15, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})
+    opening2 = Opening({'position': [4, 0, 1.2], 'width':1.25, 
+                        'height':1, 'thickness':0.2, 'color': [0.7, 0.7, 0.7]})    
     return Configuration().add(opening1).add(opening2)
+
+    
     
 def Q5b():  
     # Ecriture avec mélange de variable et de chaînage   
@@ -98,7 +114,7 @@ def main():
     # configuration = Q1b_f()
     # configuration = Q2b()
     # configuration = Q2c()
-    # configuration = Q3a()
+    configuration = Q3a()
     # configuration = Q4a()
     # configuration = Q5a()
     # configuration = Q5b()
